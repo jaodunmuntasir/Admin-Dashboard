@@ -11,7 +11,7 @@ import Menu from "./components/menu/Menu";
 import Footer from "./components/footer/Footer";
 
 function App() {
-  
+
   const Layout = () => {
     return (
       <div className="main">
@@ -27,36 +27,23 @@ function App() {
         <Footer />
       </div>
     )
-
-    const router = createBrowserRouter([
-      
-      {
-        path: "/",
-        element: <Layout/>,
-        children: [
-          {
-            path: "/",
-            element: (
-              <Home />
-            ),
-          },
-          {
-            path: "users",
-            element: <Users />,
-          },
-          {
-            path: "products",
-            element: <Products />,
-          },
-        ]
-      }
-      
-    ]);
-
-    return (
-      <RouterProvider router= {router} />
-    )
   }
+
+  const router = createBrowserRouter([   
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        { path: "/", element: <Home /> },
+        { path: "products", element: <Products /> },
+        { path: "users", element: <Users /> }
+      ]
+    }   
+  ]);
+
+  return (
+    <RouterProvider router= {router} />
+  );
 }
 
 export default App;
