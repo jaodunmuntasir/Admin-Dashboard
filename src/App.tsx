@@ -9,6 +9,8 @@ import Users from "./pages/users/Users";
 import Navbar from "./components/navbar/Navbar";
 import Menu from "./components/menu/Menu";
 import Footer from "./components/footer/Footer";
+import Login from "./components/login/Login";
+import "./styles/global.scss";
 
 function App() {
 
@@ -38,7 +40,11 @@ function App() {
         { path: "products", element: <Products /> },
         { path: "users", element: <Users /> }
       ]
-    }   
+    },  
+    {
+      path: "/login",
+      element: <Login />,
+    } 
   ]);
 
   return (
