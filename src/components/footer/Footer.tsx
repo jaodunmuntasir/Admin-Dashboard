@@ -3,7 +3,8 @@ import "./footer.scss";
 const Footer = () => {
     return (
         <div className="footer">
-        <h1>Footer</h1>
+        <span>Admin Template</span>
+        <span>@ 2024 All rights reserved | <a href="https://github.com/jaodunmuntasir">Jaodun Muntasir</a></span>
         </div>
     );
 }
